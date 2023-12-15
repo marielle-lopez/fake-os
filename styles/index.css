@@ -6,6 +6,38 @@
   font-family: DePixelHalbfett;
   src: url("../resources/fonts/DePixelHalbfett.ttf");
 }
-* {
+body {
   font-family: DePixelHalbfett;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: #5bb1ee;
+}
+
+.taskbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 20px;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+.taskbar__container {
+  display: flex;
+  align-items: center;
+}
+.taskbar__list {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.taskbar__list__item {
+  margin-right: 20px;
+}
+.taskbar__list__item__logo {
+  width: 16px;
+}
+.taskbar__time {
+  margin: 0;
 }
