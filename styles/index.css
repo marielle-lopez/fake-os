@@ -1,0 +1,11 @@
+@font-face {
+  font-family: DePixelKlein;
+  src: url("../resources/fonts/DePixelKlein.ttf");
+}
+@font-face {
+  font-family: DePixelHalbfett;
+  src: url("../resources/fonts/DePixelHalbfett.ttf");
+}
+* {
+  font-family: DePixelHalbfett;
+}
