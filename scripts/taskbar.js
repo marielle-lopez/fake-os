@@ -61,11 +61,25 @@ function updateClock() {
   clock.innerText = clockString;
 }
 
-function toggleDropdown(dropdown) {
-  console.log(`${dropdown} was clicked!`);
-  document.querySelector(dropdown).classList.toggle("show");
-  console.log(document.querySelector(dropdown).classList);
+function toggleDropdown(id) {
+  document.querySelector(id).classList.toggle("show");
 }
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropdown__button")) {
+    let dropdowns = document.querySelectorAll(".dropdown__content");
+
+    console.log(dropdowns);
+
+    for (let i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
 
 updateClock();
 setInterval(updateClock, 1000);

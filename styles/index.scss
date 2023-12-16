@@ -1,5 +1,9 @@
 @use "./partials/mixins/layout";
 
+#test {
+  display: none;
+}
+
 .body {
   @include layout.body;
 }
@@ -8,10 +12,9 @@
   @include layout.taskbar;
 }
 
-.show {
-  @include layout.show;
-}
-
 .dropdown {
   @include layout.dropdown;
+}
+.show {
+  @include layout.show;
 }
