@@ -53,9 +53,10 @@
   position: relative;
   display: inline-block;
 
-  &:hover &__content {
-    display: block;
-  }
+  // &:hover &__content,
+  // &:focus {
+  //   display: block;
+  // }
 
   &__button {
     font-family: DePixelHalbfett;
@@ -84,4 +85,8 @@
       }
     }
   }
+}
+
+@mixin show {
+  display: block;
 }

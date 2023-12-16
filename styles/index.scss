@@ -8,6 +8,10 @@
   @include layout.taskbar;
 }
 
+.show {
+  @include layout.show;
+}
+
 .dropdown {
   @include layout.dropdown;
 }

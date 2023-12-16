@@ -1,6 +1,5 @@
-const clock = document.querySelector("#clock");
-
 function updateClock() {
+  const clock = document.querySelector("#clock");
   const now = new Date();
 
   const day = now.getDate();
@@ -60,6 +59,12 @@ function updateClock() {
     .padStart(2, "0")}`;
 
   clock.innerText = clockString;
+}
+
+function toggleDropdown(dropdown) {
+  console.log(`${dropdown} was clicked!`);
+  document.querySelector(dropdown).classList.toggle("show");
+  console.log(document.querySelector(dropdown).classList);
 }
 
 updateClock();

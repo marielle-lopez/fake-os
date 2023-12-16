@@ -42,12 +42,13 @@
   margin: 0;
 }
 
+.show {
+  display: block;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
-}
-.dropdown:hover .dropdown__content {
-  display: block;
 }
 .dropdown__button {
   font-family: DePixelHalbfett;
