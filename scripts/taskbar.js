@@ -81,5 +81,24 @@ window.onclick = function (event) {
   }
 };
 
+async function setWeather() {
+  const weather = document.querySelector("#weather");
+  const url =
+    "http://api.weatherapi.com/v1/current.json?key=deaee7e239224b5c83c90948231612&q=auto:ip";
+  const response = await fetch(url);
+
+  let data = await response.json();
+
+  const currentWeather = {
+    condition: data.current.condition.text,
+    temperature: data.current.temp_c,
+  };
+
+  const weatherString = `${currentWeather.temperature}°C ${currentWeather.condition}`;
+
+  weather.innerText = weatherString;
+}
+
+setWeather();
 updateClock();
 setInterval(updateClock, 1000);

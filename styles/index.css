@@ -33,6 +33,10 @@
   margin: 0;
   cursor: default;
 }
+.taskbar__weather {
+  margin: 0 20px 0 0;
+  cursor: default;
+}
 
 .dropdown {
   position: relative;
