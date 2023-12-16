@@ -31,3 +31,7 @@
 .apps {
   @include layout.apps;
 }
+
+.calculator {
+  @include layout.calculator;
+}

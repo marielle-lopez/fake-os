@@ -110,3 +110,29 @@
   font-family: LeviWindows;
   font-size: 15px;
 }
+
+.calculator {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+.calculator__screen {
+  background-color: #f0fcca;
+  border: 1px solid black;
+}
+.calculator__buttons__bottom {
+  display: flex;
+}
+.calculator__buttons__row5 {
+  display: flex;
+}
+.calculator__buttons__row5--zero {
+  flex-grow: 1;
+}
+.calculator__buttons__col2 {
+  display: flex;
+}
+.calculator__buttons__col2--equals {
+  flex-grow: 1;
+}

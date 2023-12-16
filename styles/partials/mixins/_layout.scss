@@ -122,3 +122,37 @@
     }
   }
 }
+
+@mixin calculator {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+
+  &__screen {
+    background-color: #f0fcca;
+    border: 1px solid black;
+  }
+
+  &__buttons {
+    &__bottom {
+      display: flex;
+    }
+
+    &__row5 {
+      display: flex;
+
+      &--zero {
+        flex-grow: 1;
+      }
+    }
+
+    &__col2 {
+      display: flex;
+
+      &--equals {
+        flex-grow: 1;
+      }
+    }
+  }
+}
