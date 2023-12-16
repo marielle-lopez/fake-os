@@ -6,16 +6,31 @@
   font-family: DePixelHalbfett;
   src: url("../resources/fonts/DePixelHalbfett.ttf");
 }
+@font-face {
+  font-family: LeviWindows;
+  src: url("../resources/fonts/LeviWindows.ttf");
+}
 #test {
   display: none;
 }
 
 .body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: DePixelHalbfett;
   font-size: 10px;
   margin: 0;
   padding: 0;
   background-color: #5bb1ee;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 30px;
 }
 
 .taskbar {
@@ -73,4 +88,25 @@
 
 .show {
   display: block;
+}
+
+.clippy__image {
+  width: 200px;
+}
+
+.apps {
+  display: flex;
+  gap: 30px;
+}
+.apps__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.apps__item__icon {
+  width: 50px;
+}
+.apps__item__name {
+  font-family: LeviWindows;
+  font-size: 15px;
 }

@@ -8,6 +8,10 @@
   @include layout.body;
 }
 
+.main {
+  @include layout.main;
+}
+
 .taskbar {
   @include layout.taskbar;
 }
@@ -15,6 +19,15 @@
 .dropdown {
   @include layout.dropdown;
 }
+
 .show {
   @include layout.show;
+}
+
+.clippy {
+  @include layout.clippy;
+}
+
+.apps {
+  @include layout.apps;
 }
