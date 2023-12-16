@@ -1,3 +1,21 @@
+@font-face {
+  font-family: DePixelKlein;
+  src: url("../resources/fonts/DePixelKlein.ttf");
+}
+
+@font-face {
+  font-family: DePixelHalbfett;
+  src: url("../resources/fonts/DePixelHalbfett.ttf");
+}
+
+@mixin body {
+  font-family: DePixelHalbfett;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: #5bb1ee;
+}
+
 @mixin taskbar {
   display: flex;
   justify-content: space-between;
@@ -19,6 +37,7 @@
 
     &__item {
       margin-right: 20px;
+
       &__logo {
         width: 16px;
       }
@@ -27,5 +46,42 @@
 
   &__time {
     margin: 0;
+  }
+}
+
+@mixin dropdown {
+  position: relative;
+  display: inline-block;
+
+  &:hover &__content {
+    display: block;
+  }
+
+  &__button {
+    font-family: DePixelHalbfett;
+    background-color: white;
+    font-size: 10px;
+    border: none;
+    padding: 0;
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1;
+
+    &__item {
+      display: block;
+      margin: 0px;
+      padding: 2px 4px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 }

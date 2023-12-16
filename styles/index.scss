@@ -1,23 +1,13 @@
 @use "./partials/mixins/layout";
 
-@font-face {
-  font-family: DePixelKlein;
-  src: url("../resources/fonts/DePixelKlein.ttf");
-}
-
-@font-face {
-  font-family: DePixelHalbfett;
-  src: url("../resources/fonts/DePixelHalbfett.ttf");
-}
-
-body {
-  font-family: DePixelHalbfett;
-  font-size: 10px;
-  margin: 0;
-  padding: 0;
-  background-color: #5bb1ee;
+.body {
+  @include layout.body;
 }
 
 .taskbar {
   @include layout.taskbar;
+}
+
+.dropdown {
+  @include layout.dropdown;
 }
