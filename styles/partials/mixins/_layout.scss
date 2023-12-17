@@ -127,16 +127,68 @@
   background-color: white;
   border: 1px solid black;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-  padding: 5px;
+
+  &__title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 2px 10px;
+
+    &__title {
+      margin: 0;
+    }
+  }
+
+  &__client-area {
+    padding: 10px;
+  }
 
   &__screen {
+    font-family: DePixelKlein;
+    font-size: 14px;
     background-color: #f0fcca;
     border: 1px solid black;
+    padding: 10px;
+    text-align: right;
+  }
+
+  &__button {
+    font-family: DePixelHalbfett;
+    font-size: 12px;
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
   }
 
   &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
     &__bottom {
       display: flex;
+    }
+
+    &__row1 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__row2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__row3 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__row4 {
+      display: flex;
+      justify-content: space-between;
     }
 
     &__row5 {
@@ -152,6 +204,7 @@
 
       &--equals {
         flex-grow: 1;
+        height: auto;
       }
     }
   }
