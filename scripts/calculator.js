@@ -1,3 +1,5 @@
+const screen = document.querySelector(".calculator__screen");
+
 function showCalculator() {
   document.querySelector(".app-area").innerText = `
     <div class="calculator">
@@ -56,4 +58,12 @@ function showCalculator() {
     </div>
   </div>
   `;
+}
+
+function appendToDisplay(input) {
+  screen.value += input;
+}
+
+function clearDisplay() {
+  screen.value = "";
 }
