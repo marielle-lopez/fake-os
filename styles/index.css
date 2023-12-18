@@ -26,6 +26,11 @@
   background-color: #5bb1ee;
 }
 
+.app-area {
+  display: flex;
+  justify-content: center;
+}
+
 .main {
   display: flex;
   justify-content: space-between;
@@ -115,6 +120,7 @@
   background-color: white;
   border: 1px solid black;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  width: fit-content;
 }
 .calculator__title-bar {
   display: flex;
@@ -130,6 +136,7 @@
   padding: 10px;
 }
 .calculator__screen {
+  width: 138px;
   font-family: DePixelKlein;
   font-size: 14px;
   background-color: #f0fcca;

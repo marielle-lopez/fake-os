@@ -1,14 +1,14 @@
-const screen = document.querySelector(".calculator__screen");
+let screen;
 
 function showCalculator() {
-  document.querySelector(".app-area").innerText = `
+  document.querySelector(".app-area").innerHTML = `
     <div class="calculator">
     <div class="calculator__title-bar">
       <p class="calculator__title-bar__title">Calculator</p>
       <span class="calculator__title-bar__close">✖</span>
     </div>
     <div class="calculator__client-area">
-      <div class="calculator__screen" readonly></div>
+      <input class="calculator__screen" id="calculator__screen" readonly />
       <div class="calculator__buttons">
         <div class="calculator__buttons__top">
           <div class="calculator__buttons__row1">
@@ -58,12 +58,27 @@ function showCalculator() {
     </div>
   </div>
   `;
+
+  screen = document.querySelector("#calculator__screen");
 }
 
 function appendToDisplay(input) {
+  console.log(input);
+  console.log(screen.value);
   screen.value += input;
 }
 
 function clearDisplay() {
   screen.value = "";
+}
+
+function calculate() {
+  try {
+    let replacedOperators = screen.value.replace(/÷/g, "/");
+    replacedOperators = screen.value.replace(/x/g, "*");
+    replacedOperators = screen.value.replace(/÷/g, "/");
+    screen.value = eval(replacedOperators);
+  } catch (error) {
+    screen.value = "Error";
+  }
 }

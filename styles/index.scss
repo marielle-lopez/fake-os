@@ -8,6 +8,10 @@
   @include layout.body;
 }
 
+.app-area {
+  @include layout.app-area;
+}
+
 .main {
   @include layout.main;
 }
