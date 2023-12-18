@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
     <script src="./scripts/taskbar.js" defer></script>
+    <script src="./scripts/calculator.js" defer></script>
     <title>FakeOS</title>
   </head>
   <body class="body">
@@ -56,62 +57,9 @@
       </div>
     </header>
 
+    <div class="app-area"></div>
+
     <main class="main">
-      <div class="calculator">
-        <div class="calculator__title-bar">
-          <p class="calculator__title-bar__title">Calculator</p>
-          <span class="calculator__title-bar__close">✖</span>
-        </div>
-        <div class="calculator__client-area">
-          <div class="calculator__screen">1234567890</div>
-          <div class="calculator__buttons">
-            <div class="calculator__buttons__top">
-              <div class="calculator__buttons__row1">
-                <button class="calculator__button">C</button>
-                <button class="calculator__button">±</button>
-                <button class="calculator__button">÷</button>
-                <button class="calculator__button">x</button>
-              </div>
-              <div class="calculator__buttons__row2">
-                <button class="calculator__button">7</button>
-                <button class="calculator__button">8</button>
-                <button class="calculator__button">9</button>
-                <button class="calculator__button">-</button>
-              </div>
-              <div class="calculator__buttons__row3">
-                <button class="calculator__button">4</button>
-                <button class="calculator__button">5</button>
-                <button class="calculator__button">6</button>
-                <button class="calculator__button">+</button>
-              </div>
-            </div>
-            <div class="calculator__buttons__bottom">
-              <div class="calculator__buttons__col1">
-                <div class="calculator__buttons__row4">
-                  <button class="calculator__button">1</button>
-                  <button class="calculator__button">2</button>
-                  <button class="calculator__button">3</button>
-                </div>
-                <div class="calculator__buttons__row5">
-                  <button
-                    class="calculator__buttons__row5--zero calculator__button"
-                  >
-                    0
-                  </button>
-                  <button class="calculator__button">.</button>
-                </div>
-              </div>
-              <div class="calculator__buttons__col2">
-                <button
-                  class="calculator__buttons__col2--equals calculator__button"
-                >
-                  =
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="apps">
         <div class="apps__item">
           <img
