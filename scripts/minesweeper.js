@@ -92,3 +92,71 @@ function clickTile() {
   let c = parseInt(coords[1]);
   checkMines(r, c);
 }
+
+function revealMines() {
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < columns; c++) {
+      let tile = board[r][c];
+      if (minesLocation.includes(tile.id)) {
+        tile.innerText = "💣";
+        tile.style.backgroundColor = "red";
+      }
+    }
+  }
+}
+
+function checkMines(r, c) {
+  if (r < 0 || r >= rows || c < 0 || c >= columns) {
+    return;
+  }
+
+  if (board[r][c].classList.contains("board__tile--clicked")) {
+    return;
+  }
+
+  board[r][c].classList.add("board__tile--clicked");
+
+  tilesClicked += 1;
+
+  let minesFound = 0;
+
+  minesFound += checkTile(r - 1, c - 1);
+  minesFound += checkTile(r - 1, c);
+  minesFound += checkTile(r - 1, c + 1);
+  minesFound += checkTile(r, c - 1);
+  minesFound += checkTile(r, c + 1);
+  minesFound += checkTile(r + 1, c - 1);
+  minesFound += checkTile(r + 1, c);
+  minesFound += checkTile(r + 1, c + 1);
+
+  if (minesFound > 0) {
+    board[r][c].innerText = minesFound;
+    board[r][c].classList.add("board__tile--" + minesFound.toString());
+  } else {
+    checkMines(r - 1, c - 1);
+    checkMines(r - 1, c);
+    checkMines(r - 1, c + 1);
+    checkMines(r, c - 1);
+    checkMines(r, c + 1);
+    checkMines(r + 1, c - 1);
+    checkMines(r + 1, c);
+    checkMines(r + 1, c + 1);
+  }
+
+  if (tilesClicked == rows * columns - minesCount) {
+    document.querySelector("#mines-count").innerText = "Cleared!";
+    gameOver = true;
+  }
+}
+
+function checkTile(r, c) {
+  if (r < 0 || r >= rows || c < 0 || c >= columns) {
+    return 0;
+  }
+
+  if (minesLocation.includes(`${r}-${c}`)) {
+    return 1;
+  }
+
+  return 0;
+}
