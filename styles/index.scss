@@ -39,3 +39,11 @@
 .calculator {
   @include layout.calculator;
 }
+
+.board {
+  @include layout.board;
+}
+
+.flag-button {
+  @include layout.flag-button;
+}

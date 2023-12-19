@@ -189,3 +189,57 @@
   flex-grow: 1;
   height: auto;
 }
+
+.board {
+  width: 400px;
+  height: 400px;
+  border: 10px solid darkgray;
+  background-color: lightgray;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.board__tile {
+  width: 48px;
+  height: 48px;
+  border: 1px solid whitesmoke;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board__tile--clicked {
+  background-color: darkgrey;
+}
+.board__tile--1 {
+  color: blue;
+}
+.board__tile--2 {
+  color: green;
+}
+.board__tile--3 {
+  color: red;
+}
+.board__tile--4 {
+  color: navy;
+}
+.board__tile--5 {
+  color: brown;
+}
+.board__tile--6 {
+  color: teal;
+}
+.board__tile--7 {
+  color: black;
+}
+.board__tile--8 {
+  color: gray;
+}
+
+.flag-button {
+  width: 100px;
+  height: 50px;
+  font-size: 30px;
+  background-color: lightgray;
+  border: none;
+}
