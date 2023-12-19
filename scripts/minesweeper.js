@@ -53,3 +53,42 @@ function setMines() {
     }
   }
 }
+
+function setFlag() {
+  if (flagEnabled) {
+    flagEnabled = false;
+    document.querySelector("#flag-button").style.backgroundColor = "lightgray";
+  } else {
+    flagEnabled = true;
+    document.querySelector("#flag-button").style.backgroundColor = "darkgray";
+  }
+}
+
+function clickTile() {
+  if (gameOver || this.classList.contains("board__tile--clicked")) {
+    return;
+  }
+
+  let tile = this;
+
+  if (flagEnabled) {
+    if (tile.innerText == "") {
+      tile.innerText = "🚩";
+    } else if (tile.innerText == "🚩") {
+      tile.innerText = "";
+    }
+    return;
+  }
+
+  if (minesLocation.includes(tile.id)) {
+    alert("Game over!");
+    gameOver = true;
+    revealMines();
+    return;
+  }
+
+  let coords = tile.id.split("-");
+  let r = parseInt(coords[0]);
+  let c = parseInt(coords[1]);
+  checkMines(r, c);
+}
