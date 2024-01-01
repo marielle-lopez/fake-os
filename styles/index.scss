@@ -1,23 +1,53 @@
 @use "./partials/mixins/layout";
 
-@font-face {
-  font-family: DePixelKlein;
-  src: url("../resources/fonts/DePixelKlein.ttf");
+#test {
+  display: none;
 }
 
-@font-face {
-  font-family: DePixelHalbfett;
-  src: url("../resources/fonts/DePixelHalbfett.ttf");
+.body {
+  @include layout.body;
 }
 
-body {
-  font-family: DePixelHalbfett;
-  font-size: 10px;
-  margin: 0;
-  padding: 0;
-  background-color: #5bb1ee;
+.app-area {
+  @include layout.app-area;
+}
+
+.main {
+  @include layout.main;
 }
 
 .taskbar {
   @include layout.taskbar;
+}
+
+.dropdown {
+  @include layout.dropdown;
+}
+
+.show {
+  @include layout.show;
+}
+
+.clippy {
+  @include layout.clippy;
+}
+
+.apps {
+  @include layout.apps;
+}
+
+.calculator {
+  @include layout.calculator;
+}
+
+.board {
+  @include layout.board;
+}
+
+.flag-button {
+  @include layout.flag-button;
+}
+
+.connect4 {
+  @include layout.connect4;
 }

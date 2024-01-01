@@ -5,29 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
     <script src="./scripts/taskbar.js" defer></script>
+    <script src="./scripts/calculator.js" defer></script>
+    <script src="./scripts/minesweeper.js" defer></script>
+    <script src="./scripts/connect4.js" defer></script>
     <title>FakeOS</title>
   </head>
   <body class="body">
     <header>
       <div class="taskbar">
         <div class="taskbar__container">
-          <ul class="taskbar__list">
-            <li class="taskbar__list__item">
-              <img
-                src="./resources/images/banana.png"
-                alt="Banana logo"
-                class="taskbar__list__item__logo"
-              />
-            </li>
-            <li class="taskbar__list__item">Settings</li>
-            <li class="taskbar__list__item">Help</li>
-          </ul>
+          <div class="dropdown">
+            <img
+              src="./resources/images/banana.png"
+              onclick="toggleDropdown('#banana')"
+              class="dropdown__button dropdown__button--image"
+            />
+
+            <div id="banana" class="dropdown__content">
+              <p class="dropdown__content__item">Option 1</p>
+              <p class="dropdown__content__item">Option 2</p>
+              <p class="dropdown__content__item">Option 3</p>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button
+              onclick="toggleDropdown('#settings')"
+              class="dropdown__button"
+            >
+              Settings
+            </button>
+            <div id="settings" class="dropdown__content">
+              <p class="dropdown__content__item">Option 1</p>
+              <p class="dropdown__content__item">Option 2</p>
+              <p class="dropdown__content__item">Option 3</p>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="toggleDropdown('#help')" class="dropdown__button">
+              Help
+            </button>
+            <div id="help" class="dropdown__content">
+              <p class="dropdown__content__item">Option 1</p>
+              <p class="dropdown__content__item">Option 2</p>
+              <p class="dropdown__content__item">Option 3</p>
+            </div>
+          </div>
         </div>
 
         <div class="taskbar__container">
+          <p class="taskbar__weather" id="weather">Weather goes here!</p>
           <p class="taskbar__time" id="clock">Time goes here!</p>
         </div>
       </div>
     </header>
+
+    <div class="app-area"></div>
+
+    <main class="main">
+      <div class="apps">
+        <div class="apps__item" onclick="showConnect4()">
+          <img
+            src="./resources/images/connect-4.png"
+            alt="Connect 4"
+            class="apps__item__icon"
+          />
+          <p class="apps__item__name">Connect 4</p>
+        </div>
+        <div class="apps__item" onclick="showCalculator()">
+          <img
+            src="./resources/images/calculator.png"
+            alt="Calculator"
+            class="apps__item__icon"
+          />
+          <p class="apps__item__name">Calculator</p>
+        </div>
+        <div class="apps__item" onclick="showMinesweeper()">
+          <img
+            src="./resources/images/minesweeper.png"
+            alt="Minesweeper"
+            class="apps__item__icon"
+          />
+          <p class="apps__item__name">Minesweeper</p>
+        </div>
+        <div class="apps__item">
+          <img
+            src="./resources/images/notepad.png"
+            alt="Notepad"
+            class="apps__item__icon"
+          />
+          <p class="apps__item__name">Notepad</p>
+        </div>
+        <div class="apps__item">
+          <img
+            src="./resources/images/gallery.png"
+            alt="Gallery"
+            class="apps__item__icon"
+          />
+          <p class="apps__item__name">Gallery</p>
+        </div>
+        <div class="apps__item">
+          <img
+            src="./resources/images/recycle-bin.png"
+            alt="Recycle bin"
+            class="apps__item__icon"
+          />
+          <p class="apps__item__name">Recycle Bin</p>
+        </div>
+      </div>
+      <div class="clippy">
+        <img
+          src="./resources/images/clippy.png"
+          alt="Clippy"
+          class="clippy__image"
+        />
+      </div>
+    </main>
   </body>
 </html>
