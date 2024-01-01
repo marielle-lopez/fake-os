@@ -72,3 +72,33 @@ function setPiece() {
 
   checkWinner();
 }
+
+function checkWinner() {
+  // horizontal sliding window checking
+  for (let r = 0; r < connect4Rows; r++) {
+    for (let c = 0; c < connect4Columns - 3; c++) {
+      if (board[r][c] != " ") {
+        if (
+          board[r][c] == board[r][c + 1] &&
+          board[r][c + 1] == board[r][c + 2] &&
+          board[r][c + 2] == board[r][c + 3]
+        ) {
+          setWinner(r, c);
+          return;
+        }
+      }
+    }
+  }
+}
+
+function setWinner(r, c) {
+  let winner = document.querySelector(".winner");
+
+  if (board[r][c] == playerRed) {
+    winner.innerText = "Red wins!";
+  } else {
+    winner.innerText = "Yellow wins!";
+  }
+
+  connect4GameOver = true;
+}
