@@ -7,12 +7,16 @@ let tilesClicked = 0;
 let flagEnabled = false;
 let gameOver = false;
 
+function hideMinesweeper() {
+  document.querySelector(".app-area").innerHTML = "";
+}
+
 function showMinesweeper() {
   document.querySelector(".app-area").innerHTML = `
     <div class="minesweeper">
       <div class="minesweeper__title-bar">
         <p class="minesweeper__title-bar__title">Minesweeper</p>
-        <span class="minesweeper__title-bar__close">✖</span>
+        <span class="minesweeper__title-bar__close" onclick="hideMinesweeper()">✖</span>
       </div>
 
       <div class="minesweeper__wrapper">
