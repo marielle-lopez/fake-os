@@ -54,6 +54,10 @@ showMinesweeper = () => {
   }
 };
 
+document
+  .querySelector("#minesweeper-desktop-icon")
+  .addEventListener("dblclick", showMinesweeper);
+
 setMines = () => {
   let minesLeft = minesCount;
 

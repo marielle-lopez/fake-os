@@ -26,6 +26,10 @@ showConnect4 = () => {
   setGame();
 };
 
+document
+  .getElementById("connect4-desktop-icon")
+  .addEventListener("dblclick", showConnect4);
+
 setGame = () => {
   board = [];
   currColumns = [5, 5, 5, 5, 5, 5, 5];

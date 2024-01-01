@@ -76,6 +76,10 @@ showCalculator = () => {
   screen = document.querySelector("#calculator__screen");
 };
 
+document
+  .querySelector("#calculator-desktop-icon")
+  .addEventListener("dblclick", showCalculator);
+
 appendToDisplay = (input) => {
   screen.value += input.target.innerText;
 };
