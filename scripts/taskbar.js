@@ -69,7 +69,7 @@ window.onclick = function (event) {
   if (!event.target.matches(".dropdown__button")) {
     let dropdowns = document.querySelectorAll(".dropdown__content");
 
-    console.log(dropdowns);
+    // console.log(dropdowns);
 
     for (let i = 0; i < dropdowns.length; i++) {
       let openDropdown = dropdowns[i];

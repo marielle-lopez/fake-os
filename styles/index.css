@@ -108,6 +108,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.apps__item:hover {
+  border: 1px dotted black;
+  cursor: pointer;
 }
 .apps__item__icon {
   width: 50px;
