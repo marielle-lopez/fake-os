@@ -12,10 +12,8 @@ function showConnect4() {
     <div class="connect4">
       <div class="connect4__title-bar">
         <p class="connect4__title-bar__title">Connect 4</p>
-        <span class="connect4__title-bar__close">✖</span>
+        <span class="connect4__title-bar__close" onclick="hideConnect4()">✖</span>
       </div>
-
-      <h2 class="connect4__winner"></h2>
 
       <div class="connect4__board"></div>
     </div>
@@ -144,7 +142,11 @@ function checkWinner() {
 }
 
 function setWinner(r, c) {
-  let winner = document.querySelector(".connect4__winner");
+  let winner = document.createElement("h2");
+  winner.classList.add("connect4__winner");
+
+  let connect4App = document.querySelector(".connect4");
+  connect4App.insertBefore(winner, connect4App.childNodes[2]);
 
   if (board[r][c] == playerRed) {
     winner.innerText = "Red wins!";
@@ -153,4 +155,8 @@ function setWinner(r, c) {
   }
 
   connect4GameOver = true;
+}
+
+function hideConnect4() {
+  document.querySelector(".app-area").innerHTML = "";
 }

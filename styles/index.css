@@ -259,6 +259,9 @@
 .connect4__title-bar__title {
   margin: 0;
 }
+.connect4__title-bar__close {
+  cursor: default;
+}
 .connect4__board {
   height: 540px;
   width: 630px;
@@ -291,7 +294,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 1;
 }
