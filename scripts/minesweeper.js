@@ -7,11 +7,11 @@ let tilesClicked = 0;
 let flagEnabled = false;
 let gameOver = false;
 
-function hideMinesweeper() {
+hideMinesweeper = () => {
   document.querySelector(".app-area").innerHTML = "";
-}
+};
 
-function showMinesweeper() {
+showMinesweeper = () => {
   document.querySelector(".app-area").innerHTML = `
     <div class="minesweeper">
       <div class="minesweeper__title-bar">
@@ -48,9 +48,9 @@ function showMinesweeper() {
 
     board.push(row);
   }
-}
+};
 
-function setMines() {
+setMines = () => {
   let minesLeft = minesCount;
 
   while (minesLeft > 0) {
@@ -63,9 +63,9 @@ function setMines() {
       minesLeft -= 1;
     }
   }
-}
+};
 
-function setFlag() {
+setFlag = () => {
   if (flagEnabled) {
     flagEnabled = false;
     document.querySelector("#flag-button").style.backgroundColor = "lightgray";
@@ -73,7 +73,7 @@ function setFlag() {
     flagEnabled = true;
     document.querySelector("#flag-button").style.backgroundColor = "darkgray";
   }
-}
+};
 
 function clickTile() {
   if (gameOver || this.classList.contains("board__tile--clicked")) {
@@ -116,7 +116,7 @@ function revealMines() {
   }
 }
 
-function checkMines(r, c) {
+checkMines = (r, c) => {
   if (r < 0 || r >= rows || c < 0 || c >= columns) {
     return;
   }
@@ -158,9 +158,9 @@ function checkMines(r, c) {
     document.querySelector("#mines-count").innerText = "Cleared!";
     gameOver = true;
   }
-}
+};
 
-function checkTile(r, c) {
+checkTile = (r, c) => {
   if (r < 0 || r >= rows || c < 0 || c >= columns) {
     return 0;
   }
@@ -170,4 +170,4 @@ function checkTile(r, c) {
   }
 
   return 0;
-}
+};
