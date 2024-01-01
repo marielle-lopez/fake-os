@@ -13,7 +13,7 @@ function showConnect4() {
       <h1>Connect 4</h1>
       <h2 class="winner"></h2>
 
-      <div class="connect4-board"></div>
+      <div class="connect4__board"></div>
     </div>
   `;
 
@@ -32,9 +32,9 @@ function setGame() {
 
       let tile = document.createElement("div");
       tile.id = `${r}-${c}`;
-      tile.classList.add("connect4-board__tile");
+      tile.classList.add("connect4__board__tile");
       tile.addEventListener("click", setPiece);
-      document.querySelector(".connect4-board").appendChild(tile);
+      document.querySelector(".connect4__board").appendChild(tile);
     }
 
     board.push(row);
@@ -60,10 +60,10 @@ function setPiece() {
   let tile = document.getElementById(`${r}-${c}`);
 
   if (currPlayer == playerRed) {
-    tile.classList.add("connect4-board__red-piece");
+    tile.classList.add("connect4__board__red-piece");
     currPlayer = playerYellow;
   } else {
-    tile.classList.add("connect4-board__yellow-piece");
+    tile.classList.add("connect4__board__yellow-piece");
     currPlayer = playerRed;
   }
 
