@@ -7,7 +7,7 @@ let connect4Rows = 6;
 let connect4Columns = 7;
 let currColumns;
 
-function showConnect4() {
+showConnect4 = () => {
   document.querySelector(".app-area").innerHTML = `
     <div class="connect4">
       <div class="connect4__title-bar">
@@ -20,9 +20,9 @@ function showConnect4() {
   `;
 
   setGame();
-}
+};
 
-function setGame() {
+setGame = () => {
   board = [];
   currColumns = [5, 5, 5, 5, 5, 5, 5];
 
@@ -41,7 +41,7 @@ function setGame() {
 
     board.push(row);
   }
-}
+};
 
 function setPiece() {
   if (connect4GameOver) {
@@ -75,7 +75,7 @@ function setPiece() {
   checkWinner();
 }
 
-function checkWinner() {
+checkWinner = () => {
   // horizontal sliding window checking
   for (let r = 0; r < connect4Rows; r++) {
     for (let c = 0; c < connect4Columns - 3; c++) {
@@ -139,9 +139,9 @@ function checkWinner() {
       }
     }
   }
-}
+};
 
-function setWinner(r, c) {
+setWinner = (r, c) => {
   let winner = document.createElement("h2");
   winner.classList.add("connect4__winner");
 
@@ -155,8 +155,8 @@ function setWinner(r, c) {
   }
 
   connect4GameOver = true;
-}
+};
 
-function hideConnect4() {
+hideConnect4 = () => {
   document.querySelector(".app-area").innerHTML = "";
-}
+};
