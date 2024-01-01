@@ -60,6 +60,10 @@
   @include layout.notepad;
 }
 
+.gallery {
+  @include layout.gallery;
+}
+
 .about-window {
   @include layout.about-window;
 }
