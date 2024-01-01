@@ -167,4 +167,5 @@ setWinner = (r, c) => {
 
 hideConnect4 = () => {
   document.querySelector(".app-area").innerHTML = "";
+  connect4GameOver = false;
 };
