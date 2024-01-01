@@ -24,4 +24,6 @@ An all-time classic game found on Windows98. Try to find all the bombs!
 
 ## Weather (Taskbar)
 
+**Note:** This feature does not function on the deployed version of this project.
+
 Wondering what's the weather? Take a look at the right of the taskbar. Utilises the WeatherAPI.
