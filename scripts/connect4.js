@@ -24,10 +24,10 @@ function setGame() {
   board = [];
   currColumns = [5, 5, 5, 5, 5, 5, 5];
 
-  for (let r = 0; r < rows; r++) {
+  for (let r = 0; r < connect4Rows; r++) {
     let row = [];
 
-    for (let c = 0; c < columns; c++) {
+    for (let c = 0; c < connect4Columns; c++) {
       row.push(" ");
 
       let tile = document.createElement("div");
@@ -39,4 +39,36 @@ function setGame() {
 
     board.push(row);
   }
+}
+
+function setPiece() {
+  if (connect4GameOver) {
+    return;
+  }
+
+  let coordinates = this.id.split("-");
+  let r = parseInt(coordinates[0]);
+  let c = parseInt(coordinates[1]);
+
+  r = currColumns[c];
+
+  if (r < 0) {
+    return;
+  }
+
+  board[r][c] = currPlayer;
+  let tile = document.getElementById(`${r}-${c}`);
+
+  if (currPlayer == playerRed) {
+    tile.classList.add("connect4-board__red-piece");
+    currPlayer = playerYellow;
+  } else {
+    tile.classList.add("connect4-board__yellow-piece");
+    currPlayer = playerRed;
+  }
+
+  r -= 1;
+  currColumns[c] = r;
+
+  checkWinner();
 }
