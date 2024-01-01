@@ -40,6 +40,10 @@
   @include layout.calculator;
 }
 
+.minesweeper {
+  @include layout.minesweeper;
+}
+
 .board {
   @include layout.board;
 }

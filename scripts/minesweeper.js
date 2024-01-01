@@ -7,15 +7,26 @@ let tilesClicked = 0;
 let flagEnabled = false;
 let gameOver = false;
 
+function hideMinesweeper() {
+  document.querySelector(".app-area").innerHTML = "";
+}
+
 function showMinesweeper() {
   document.querySelector(".app-area").innerHTML = `
     <div class="minesweeper">
-      <h1>Mines: <span id="mines-count">0</span></h1>
+      <div class="minesweeper__title-bar">
+        <p class="minesweeper__title-bar__title">Minesweeper</p>
+        <span class="minesweeper__title-bar__close" onclick="hideMinesweeper()">✖</span>
+      </div>
 
-      <div class="board" id="board"></div>
-      <br />
-
-      <button class="flag-button" id="flag-button">🚩</button>
+      <div class="minesweeper__wrapper">
+        <h1>Mines: <span id="mines-count">0</span></h1>
+        
+        <div class="board" id="board"></div>
+        <br />
+        
+        <button class="flag-button" id="flag-button">🚩</button>
+      </div>
     </div>
   `;
 
