@@ -1,4 +1,4 @@
-function updateClock() {
+updateClock = () => {
   const clock = document.querySelector("#clock");
   const now = new Date();
 
@@ -59,11 +59,11 @@ function updateClock() {
     .padStart(2, "0")}`;
 
   clock.innerText = clockString;
-}
+};
 
-function toggleDropdown(id) {
+toggleDropdown = (id) => {
   document.querySelector(id).classList.toggle("show");
-}
+};
 
 window.onclick = function (event) {
   if (!event.target.matches(".dropdown__button")) {

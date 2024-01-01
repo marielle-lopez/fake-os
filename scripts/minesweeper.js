@@ -16,7 +16,7 @@ showMinesweeper = () => {
     <div class="minesweeper">
       <div class="minesweeper__title-bar">
         <p class="minesweeper__title-bar__title">Minesweeper</p>
-        <span class="minesweeper__title-bar__close" onclick="hideMinesweeper()">✖</span>
+        <span class="minesweeper__title-bar__close">✖</span>
       </div>
 
       <div class="minesweeper__wrapper">
@@ -29,6 +29,10 @@ showMinesweeper = () => {
       </div>
     </div>
   `;
+
+  document
+    .querySelector(".minesweeper__title-bar__close")
+    .addEventListener("click", hideMinesweeper);
 
   document.querySelector("#mines-count").innerText = minesCount;
   document.querySelector("#flag-button").addEventListener("click", setFlag);
