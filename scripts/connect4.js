@@ -12,12 +12,16 @@ showConnect4 = () => {
     <div class="connect4">
       <div class="connect4__title-bar">
         <p class="connect4__title-bar__title">Connect 4</p>
-        <span class="connect4__title-bar__close" onclick="hideConnect4()">✖</span>
+        <span class="connect4__title-bar__close">✖</span>
       </div>
 
       <div class="connect4__board"></div>
     </div>
   `;
+
+  document
+    .querySelector(".connect4__title-bar__close")
+    .addEventListener("click", hideConnect4);
 
   setGame();
 };
