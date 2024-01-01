@@ -82,7 +82,6 @@ clearDisplay = () => {
 
 calculate = () => {
   screen.value = screen.value.slice(0, screen.value.length - 1);
-  console.log(screen.value);
 
   try {
     let replacedOperators = screen.value.replace(/÷/g, "/");

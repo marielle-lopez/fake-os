@@ -17,38 +17,27 @@
         <div class="taskbar__container">
           <div class="dropdown">
             <img
+              id="banana-image"
               src="./resources/images/banana.png"
-              onclick="toggleDropdown('#banana')"
               class="dropdown__button dropdown__button--image"
             />
 
             <div id="banana" class="dropdown__content">
-              <p class="dropdown__content__item">Option 1</p>
-              <p class="dropdown__content__item">Option 2</p>
-              <p class="dropdown__content__item">Option 3</p>
+              <p id="about" class="dropdown__content__item">About This OS</p>
             </div>
           </div>
           <div class="dropdown">
-            <button
-              onclick="toggleDropdown('#settings')"
-              class="dropdown__button"
-            >
+            <button id="settings-option" class="dropdown__button">
               Settings
             </button>
             <div id="settings" class="dropdown__content">
-              <p class="dropdown__content__item">Option 1</p>
-              <p class="dropdown__content__item">Option 2</p>
-              <p class="dropdown__content__item">Option 3</p>
+              <p class="dropdown__content__item">Change background colour</p>
             </div>
           </div>
           <div class="dropdown">
-            <button onclick="toggleDropdown('#help')" class="dropdown__button">
-              Help
-            </button>
+            <button id="help-option" class="dropdown__button">Help</button>
             <div id="help" class="dropdown__content">
-              <p class="dropdown__content__item">Option 1</p>
-              <p class="dropdown__content__item">Option 2</p>
-              <p class="dropdown__content__item">Option 3</p>
+              <p class="dropdown__content__item">How do I use this?</p>
             </div>
           </div>
         </div>
