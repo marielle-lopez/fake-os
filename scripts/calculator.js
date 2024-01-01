@@ -17,7 +17,7 @@ function showCalculator() {
         <div class="calculator__buttons__top">
           <div class="calculator__buttons__row1">
             <button class="calculator__button" onclick="clearDisplay()">C</button>
-            <button class="calculator__button" onclick="appendToDisplay('±')">±</button>
+            <button class="calculator__button" onclick="appendToDisplay('%')">%</button>
             <button class="calculator__button" onclick="appendToDisplay('÷')">÷</button>
             <button class="calculator__button" onclick="appendToDisplay('x')">x</button>
           </div>
