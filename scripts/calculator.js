@@ -1,11 +1,15 @@
 let screen;
 
+function hideCalculator() {
+  document.querySelector(".app-area").innerHTML = "";
+}
+
 function showCalculator() {
   document.querySelector(".app-area").innerHTML = `
     <div class="calculator">
     <div class="calculator__title-bar">
       <p class="calculator__title-bar__title">Calculator</p>
-      <span class="calculator__title-bar__close">✖</span>
+      <span class="calculator__title-bar__close" onclick="hideCalculator()">✖</span>
     </div>
     <div class="calculator__client-area">
       <input class="calculator__screen" id="calculator__screen" readonly />
@@ -13,7 +17,7 @@ function showCalculator() {
         <div class="calculator__buttons__top">
           <div class="calculator__buttons__row1">
             <button class="calculator__button" onclick="clearDisplay()">C</button>
-            <button class="calculator__button" onclick="appendToDisplay('±')">±</button>
+            <button class="calculator__button" onclick="appendToDisplay('%')">%</button>
             <button class="calculator__button" onclick="appendToDisplay('÷')">÷</button>
             <button class="calculator__button" onclick="appendToDisplay('x')">x</button>
           </div>

@@ -133,6 +133,9 @@
 .calculator__title-bar__title {
   margin: 0;
 }
+.calculator__title-bar__close {
+  cursor: default;
+}
 .calculator__client-area {
   padding: 10px;
 }
