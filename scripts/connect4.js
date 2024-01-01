@@ -10,8 +10,12 @@ let currColumns;
 function showConnect4() {
   document.querySelector(".app-area").innerHTML = `
     <div class="connect4">
-      <h1>Connect 4</h1>
-      <h2 class="winner"></h2>
+      <div class="connect4__title-bar">
+        <p class="connect4__title-bar__title">Connect 4</p>
+        <span class="connect4__title-bar__close">✖</span>
+      </div>
+
+      <h2 class="connect4__winner"></h2>
 
       <div class="connect4__board"></div>
     </div>
@@ -60,10 +64,10 @@ function setPiece() {
   let tile = document.getElementById(`${r}-${c}`);
 
   if (currPlayer == playerRed) {
-    tile.classList.add("connect4__board__red-piece");
+    tile.classList.add("connect4__board__tile--red-piece");
     currPlayer = playerYellow;
   } else {
-    tile.classList.add("connect4__board__yellow-piece");
+    tile.classList.add("connect4__board__tile--yellow-piece");
     currPlayer = playerRed;
   }
 
@@ -140,7 +144,7 @@ function checkWinner() {
 }
 
 function setWinner(r, c) {
-  let winner = document.querySelector(".winner");
+  let winner = document.querySelector(".connect4__winner");
 
   if (board[r][c] == playerRed) {
     winner.innerText = "Red wins!";

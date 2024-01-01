@@ -245,6 +245,20 @@
   border: none;
 }
 
+.connect4 {
+  background-color: white;
+  border: 1px solid black;
+}
+.connect4__title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 2px 10px;
+}
+.connect4__title-bar__title {
+  margin: 0;
+}
 .connect4__board {
   height: 540px;
   width: 630px;
@@ -262,9 +276,22 @@
   border-radius: 50%;
   margin: 5px;
 }
-.connect4__board__red-piece {
+.connect4__board__tile--red-piece {
   background-color: red;
 }
-.connect4__board__yellow-piece {
+.connect4__board__tile--yellow-piece {
   background-color: yellow;
+}
+.connect4__winner {
+  color: white;
+  font-size: 24px;
+  display: flex;
+  height: 560px;
+  width: 650px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 1;
 }
