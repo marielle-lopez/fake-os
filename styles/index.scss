@@ -55,3 +55,15 @@
 .connect4 {
   @include layout.connect4;
 }
+
+.about-window {
+  @include layout.about-window;
+}
+
+.settings-window {
+  @include layout.settings-window;
+}
+
+.help-window {
+  @include layout.help-window;
+}

@@ -81,6 +81,10 @@ window.onclick = function (event) {
   }
 };
 
+hideApplication = () => {
+  document.querySelector(".app-area").innerHTML = "";
+};
+
 showAbout = () => {
   document.querySelector(".app-area").innerHTML = `
     <div class="about-window">
@@ -89,10 +93,15 @@ showAbout = () => {
         <span class="about-window__title-bar__close">✖</span>
       </div>
 
-      <h1>About this OS</h1>
-      <p>Made by Marielle Louisse Lopez :)</p>
+      <h1 class="about-window__heading">About this OS</h1>
+      <p class="about-window__text">Welcome to Banana! This is an OS based on both the classic MacOS and Windows98. Enjoy!</p>
+      <p class="about-window__text">Made by Marielle Louisse Lopez :)</p>
     </div>
   `;
+
+  document
+    .querySelector(".about-window__title-bar__close")
+    .addEventListener("click", hideApplication);
 };
 
 showSettings = () => {
@@ -103,9 +112,15 @@ showSettings = () => {
         <span class="settings-window__title-bar__close">✖</span>
       </div>
 
-      <h1>Change Background Colour</h1>
+      <h1 class="settings-window__heading">Change Background Colour</h1>
+
+      <p class="settings-window__text">Sorry, this feature isn't available yet. Come back another time!</p>
     </div>
   `;
+
+  document
+    .querySelector(".settings-window__title-bar__close")
+    .addEventListener("click", hideApplication);
 };
 
 showHelp = () => {
@@ -116,10 +131,15 @@ showHelp = () => {
         <span class="help-window__title-bar__close">✖</span>
       </div>
 
-      <h1 class="help-window__title">How do I use this?</h1>
+      <h1 class="help-window__heading">How do I use this?</h1>
       <p class="help-window__text">Some taskbar options display a corresponding dropdown menu with a single click. Double-click desktop icons to open them up!</p>
+      <p class="help-window__text">To close application windows, click the '✖' symbol in the top-right of the application window.</p>
     </div>
   `;
+
+  document
+    .querySelector(".help-window__title-bar__close")
+    .addEventListener("click", hideApplication);
 };
 
 async function setWeather() {
