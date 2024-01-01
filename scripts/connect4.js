@@ -51,12 +51,12 @@ setGame = () => {
   }
 };
 
-function setPiece() {
+setPiece = (event) => {
   if (connect4GameOver) {
     return;
   }
 
-  let coordinates = this.id.split("-");
+  let coordinates = event.target.id.split("-");
   let r = parseInt(coordinates[0]);
   let c = parseInt(coordinates[1]);
 
@@ -81,7 +81,7 @@ function setPiece() {
   currColumns[c] = r;
 
   checkWinner();
-}
+};
 
 checkWinner = () => {
   // horizontal sliding window checking

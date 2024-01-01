@@ -83,12 +83,12 @@ setFlag = () => {
   }
 };
 
-function clickTile() {
-  if (gameOver || this.classList.contains("board__tile--clicked")) {
+clickTile = (event) => {
+  if (gameOver || event.target.classList.contains("board__tile--clicked")) {
     return;
   }
 
-  let tile = this;
+  let tile = event.target;
 
   if (flagEnabled) {
     if (tile.innerText == "") {
@@ -110,9 +110,9 @@ function clickTile() {
   let r = parseInt(coords[0]);
   let c = parseInt(coords[1]);
   checkMines(r, c);
-}
+};
 
-function revealMines() {
+revealMines = () => {
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns; c++) {
       let tile = board[r][c];
@@ -122,7 +122,7 @@ function revealMines() {
       }
     }
   }
-}
+};
 
 checkMines = (r, c) => {
   if (r < 0 || r >= rows || c < 0 || c >= columns) {
