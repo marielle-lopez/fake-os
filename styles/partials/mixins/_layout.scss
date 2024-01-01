@@ -281,3 +281,30 @@
   background-color: lightgray;
   border: none;
 }
+
+@mixin connect4-board {
+  height: 540px;
+  width: 630px;
+  background-color: blue;
+  border: 10px solid navy;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__tile {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border: 5px solid navy;
+    border-radius: 50%;
+    margin: 5px;
+  }
+
+  &__red-piece {
+    background-color: red;
+  }
+
+  &__yellow-piece {
+    background-color: yellow;
+  }
+}

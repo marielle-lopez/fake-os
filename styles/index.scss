@@ -47,3 +47,7 @@
 .flag-button {
   @include layout.flag-button;
 }
+
+.connect4-board {
+  @include layout.connect4-board;
+}
