@@ -64,6 +64,10 @@
   @include layout.gallery;
 }
 
+.recycle-bin {
+  @include layout.recycle-bin;
+}
+
 .about-window {
   @include layout.about-window;
 }
