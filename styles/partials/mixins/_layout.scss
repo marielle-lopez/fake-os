@@ -222,6 +222,32 @@
   }
 }
 
+@mixin minesweeper {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+
+  &__title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 2px 10px;
+
+    &__title {
+      margin: 0;
+    }
+
+    &__close {
+      cursor: default;
+    }
+  }
+
+  &__wrapper {
+    margin: 20px;
+  }
+}
+
 @mixin board {
   width: 400px;
   height: 400px;
