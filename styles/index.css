@@ -251,6 +251,7 @@
 .connect4 {
   background-color: white;
   border: 1px solid black;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 .connect4__title-bar {
   display: flex;
