@@ -144,6 +144,10 @@
     &__title {
       margin: 0;
     }
+
+    &__close {
+      cursor: default;
+    }
   }
 
   &__client-area {
