@@ -87,58 +87,58 @@ hideApplication = () => {
 
 showAbout = () => {
   document.querySelector(".app-area").innerHTML = `
-    <div class="about-window">
-      <div class="about-window__title-bar">
-        <p class="about-window__title-bar__title">About</p>
-        <span class="about-window__title-bar__close">✖</span>
+    <div class="about">
+      <div class="about__title-bar">
+        <p class="about__title-bar__title">About</p>
+        <span class="about__title-bar__close">✖</span>
       </div>
 
-      <h1 class="about-window__heading">About this OS</h1>
-      <p class="about-window__text">Welcome to Banana! This is an OS based on both the classic MacOS and Windows98. Enjoy!</p>
-      <p class="about-window__text">Made by Marielle Louisse Lopez :)</p>
+      <h1 class="about__heading">About this OS</h1>
+      <p class="about__text">Welcome to Banana! This is an OS based on both the classic MacOS and Windows98. Enjoy!</p>
+      <p class="about__text">Made by Marielle Louisse Lopez :)</p>
     </div>
   `;
 
   document
-    .querySelector(".about-window__title-bar__close")
+    .querySelector(".about__title-bar__close")
     .addEventListener("click", hideApplication);
 };
 
 showSettings = () => {
   document.querySelector(".app-area").innerHTML = `
-    <div class="settings-window">
-      <div class="settings-window__title-bar">
-        <p class="settings-window__title-bar__title">Settings</p>
-        <span class="settings-window__title-bar__close">✖</span>
+    <div class="settings">
+      <div class="settings__title-bar">
+        <p class="settings__title-bar__title">Settings</p>
+        <span class="settings__title-bar__close">✖</span>
       </div>
 
-      <h1 class="settings-window__heading">Change Background Colour</h1>
+      <h1 class="settings__heading">Change Background Colour</h1>
 
-      <p class="settings-window__text">Sorry, this feature isn't available yet. Come back another time!</p>
+      <p class="settings__text">Sorry, this feature isn't available yet. Come back another time!</p>
     </div>
   `;
 
   document
-    .querySelector(".settings-window__title-bar__close")
+    .querySelector(".settings__title-bar__close")
     .addEventListener("click", hideApplication);
 };
 
 showHelp = () => {
   document.querySelector(".app-area").innerHTML = `
-    <div class="help-window">
-      <div class="help-window__title-bar">
-        <p class="help-window__title-bar__title">Help</p>
-        <span class="help-window__title-bar__close">✖</span>
+    <div class="help">
+      <div class="help__title-bar">
+        <p class="help__title-bar__title">Help</p>
+        <span class="help__title-bar__close">✖</span>
       </div>
 
-      <h1 class="help-window__heading">How do I use this?</h1>
-      <p class="help-window__text">Some taskbar options display a corresponding dropdown menu with a single click. Double-click desktop icons to open them up!</p>
-      <p class="help-window__text">To close application windows, click the '✖' symbol in the top-right of the application window.</p>
+      <h1 class="help__heading">How do I use this?</h1>
+      <p class="help__text">Some taskbar options display a corresponding dropdown menu with a single click. Double-click desktop icons to open them up!</p>
+      <p class="help__text">To close application windows, click the '✖' symbol in the top-right of the application window.</p>
     </div>
   `;
 
   document
-    .querySelector(".help-window__title-bar__close")
+    .querySelector(".help__title-bar__close")
     .addEventListener("click", hideApplication);
 };
 

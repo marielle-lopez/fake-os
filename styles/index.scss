@@ -44,14 +44,6 @@
   @include layout.minesweeper;
 }
 
-.board {
-  @include layout.board;
-}
-
-.flag-button {
-  @include layout.flag-button;
-}
-
 .connect4 {
   @include layout.connect4;
 }
@@ -68,14 +60,14 @@
   @include layout.recycle-bin;
 }
 
-.about-window {
-  @include layout.about-window;
+.about {
+  @include layout.about;
 }
 
 .settings-window {
-  @include layout.settings-window;
+  @include layout.settings;
 }
 
 .help-window {
-  @include layout.help-window;
+  @include layout.help;
 }

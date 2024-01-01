@@ -22,10 +22,10 @@ showMinesweeper = () => {
       <div class="minesweeper__wrapper">
         <h1>Mines: <span id="mines-count">0</span></h1>
         
-        <div class="board" id="board"></div>
+        <div class="minesweeper__board" id="board"></div>
         <br />
         
-        <button class="flag-button" id="flag-button">🚩</button>
+        <button class="minesweeper__flag-button" id="flag-button">🚩</button>
       </div>
     </div>
   `;
@@ -44,7 +44,7 @@ showMinesweeper = () => {
     for (let c = 0; c < columns; c++) {
       let tile = document.createElement("div");
       tile.id = `${r}-${c}`;
-      tile.className = "board__tile";
+      tile.className = "minesweeper__board__tile";
       tile.addEventListener("click", clickTile);
       document.querySelector("#board").appendChild(tile);
       row.push(tile);
@@ -84,7 +84,10 @@ setFlag = () => {
 };
 
 clickTile = (event) => {
-  if (gameOver || event.target.classList.contains("board__tile--clicked")) {
+  if (
+    gameOver ||
+    event.target.classList.contains("minesweeper__board__tile--clicked")
+  ) {
     return;
   }
 
@@ -129,11 +132,11 @@ checkMines = (r, c) => {
     return;
   }
 
-  if (board[r][c].classList.contains("board__tile--clicked")) {
+  if (board[r][c].classList.contains("minesweeper__board__tile--clicked")) {
     return;
   }
 
-  board[r][c].classList.add("board__tile--clicked");
+  board[r][c].classList.add("minesweeper__board__tile--clicked");
 
   tilesClicked += 1;
 
@@ -150,7 +153,9 @@ checkMines = (r, c) => {
 
   if (minesFound > 0) {
     board[r][c].innerText = minesFound;
-    board[r][c].classList.add("board__tile--" + minesFound.toString());
+    board[r][c].classList.add(
+      "minesweeper__board__tile--" + minesFound.toString()
+    );
   } else {
     checkMines(r - 1, c - 1);
     checkMines(r - 1, c);

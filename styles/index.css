@@ -220,8 +220,7 @@
 .minesweeper__wrapper {
   margin: 20px;
 }
-
-.board {
+.minesweeper__board {
   width: 400px;
   height: 400px;
   border: 10px solid darkgray;
@@ -230,7 +229,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-.board__tile {
+.minesweeper__board__tile {
   width: 48px;
   height: 48px;
   border: 1px solid whitesmoke;
@@ -239,35 +238,34 @@
   justify-content: center;
   align-items: center;
 }
-.board__tile--clicked {
+.minesweeper__board__tile--clicked {
   background-color: darkgrey;
 }
-.board__tile--1 {
+.minesweeper__board__tile--1 {
   color: blue;
 }
-.board__tile--2 {
+.minesweeper__board__tile--2 {
   color: green;
 }
-.board__tile--3 {
+.minesweeper__board__tile--3 {
   color: red;
 }
-.board__tile--4 {
+.minesweeper__board__tile--4 {
   color: navy;
 }
-.board__tile--5 {
+.minesweeper__board__tile--5 {
   color: brown;
 }
-.board__tile--6 {
+.minesweeper__board__tile--6 {
   color: teal;
 }
-.board__tile--7 {
+.minesweeper__board__tile--7 {
   color: black;
 }
-.board__tile--8 {
+.minesweeper__board__tile--8 {
   color: gray;
 }
-
-.flag-button {
+.minesweeper__flag-button {
   width: 100px;
   height: 50px;
   font-size: 30px;
@@ -415,29 +413,29 @@
   font-size: 16px;
 }
 
-.about-window {
+.about {
   background-color: white;
   border: 1px solid black;
   width: 600px;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
-.about-window__title-bar {
+.about__title-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
   padding: 2px 10px;
 }
-.about-window__title-bar__title {
+.about__title-bar__title {
   margin: 0;
 }
-.about-window__title-bar__close {
+.about__title-bar__close {
   cursor: default;
 }
-.about-window__heading {
+.about__heading {
   margin: 20px 15px;
 }
-.about-window__text {
+.about__text {
   margin: 30px 15px 20px;
   font-family: LeviWindows;
   font-size: 16px;

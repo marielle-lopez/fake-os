@@ -252,70 +252,70 @@
   &__wrapper {
     margin: 20px;
   }
-}
 
-@mixin board {
-  width: 400px;
-  height: 400px;
-  border: 10px solid darkgray;
-  background-color: lightgray;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-
-  &__tile {
-    width: 48px;
-    height: 48px;
-    border: 1px solid whitesmoke;
-    font-size: 30px;
+  &__board {
+    width: 400px;
+    height: 400px;
+    border: 10px solid darkgray;
+    background-color: lightgray;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 
-    &--clicked {
-      background-color: darkgrey;
-    }
+    &__tile {
+      width: 48px;
+      height: 48px;
+      border: 1px solid whitesmoke;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    &--1 {
-      color: blue;
-    }
+      &--clicked {
+        background-color: darkgrey;
+      }
 
-    &--2 {
-      color: green;
-    }
+      &--1 {
+        color: blue;
+      }
 
-    &--3 {
-      color: red;
-    }
+      &--2 {
+        color: green;
+      }
 
-    &--4 {
-      color: navy;
-    }
+      &--3 {
+        color: red;
+      }
 
-    &--5 {
-      color: brown;
-    }
+      &--4 {
+        color: navy;
+      }
 
-    &--6 {
-      color: teal;
-    }
+      &--5 {
+        color: brown;
+      }
 
-    &--7 {
-      color: black;
-    }
+      &--6 {
+        color: teal;
+      }
 
-    &--8 {
-      color: gray;
+      &--7 {
+        color: black;
+      }
+
+      &--8 {
+        color: gray;
+      }
     }
   }
-}
 
-@mixin flag-button {
-  width: 100px;
-  height: 50px;
-  font-size: 30px;
-  background-color: lightgray;
-  border: none;
+  &__flag-button {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightgray;
+    border: none;
+  }
 }
 
 @mixin connect4 {
@@ -481,7 +481,7 @@
   }
 }
 
-@mixin about-window {
+@mixin about {
   background-color: white;
   border: 1px solid black;
   width: 600px;
@@ -514,7 +514,7 @@
   }
 }
 
-@mixin settings-window {
+@mixin settings {
   background-color: white;
   border: 1px solid black;
   width: 600px;
@@ -547,7 +547,7 @@
   }
 }
 
-@mixin help-window {
+@mixin help {
   background-color: white;
   border: 1px solid black;
   width: 600px;
