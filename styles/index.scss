@@ -56,6 +56,10 @@
   @include layout.connect4;
 }
 
+.notepad {
+  @include layout.notepad;
+}
+
 .about-window {
   @include layout.about-window;
 }
