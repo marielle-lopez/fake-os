@@ -9,7 +9,7 @@ showCalculator = () => {
     <div class="calculator">
     <div class="calculator__title-bar">
       <p class="calculator__title-bar__title">Calculator</p>
-      <span class="calculator__title-bar__close" onclick="hideCalculator()">✖</span>
+      <span class="calculator__title-bar__close">✖</span>
     </div>
     <div class="calculator__client-area">
       <input class="calculator__screen" id="calculator__screen" readonly />
@@ -68,6 +68,10 @@ showCalculator = () => {
   document
     .querySelector(".calculator__buttons__col2--equals")
     .addEventListener("click", calculate);
+
+  document
+    .querySelector(".calculator__title-bar__close")
+    .addEventListener("click", hideCalculator);
 
   screen = document.querySelector("#calculator__screen");
 };
