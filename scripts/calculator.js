@@ -1,10 +1,10 @@
 let screen;
 
-function hideCalculator() {
+hideCalculator = () => {
   document.querySelector(".app-area").innerHTML = "";
-}
+};
 
-function showCalculator() {
+showCalculator = () => {
   document.querySelector(".app-area").innerHTML = `
     <div class="calculator">
     <div class="calculator__title-bar">
@@ -64,19 +64,17 @@ function showCalculator() {
   `;
 
   screen = document.querySelector("#calculator__screen");
-}
+};
 
-function appendToDisplay(input) {
-  console.log(input);
-  console.log(screen.value);
+appendToDisplay = (input) => {
   screen.value += input;
-}
+};
 
-function clearDisplay() {
+clearDisplay = () => {
   screen.value = "";
-}
+};
 
-function calculate() {
+calculate = () => {
   try {
     let replacedOperators = screen.value.replace(/÷/g, "/");
     replacedOperators = screen.value.replace(/x/g, "*");
@@ -85,4 +83,4 @@ function calculate() {
   } catch (error) {
     screen.value = "Error";
   }
-}
+};
