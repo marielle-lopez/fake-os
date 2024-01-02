@@ -147,6 +147,8 @@ async function setWeather() {
   let weatherString;
 
   try {
+    weatherString = "Retrieving weather data...";
+    weather.innerText = weatherString;
     const url =
       "https://api.weatherapi.com/v1/current.json?key=deaee7e239224b5c83c90948231612&q=auto:ip";
     const response = await fetch(url);
