@@ -162,9 +162,9 @@ async function setWeather() {
   } catch (error) {
     console.warn(error);
     weatherString = "Weather data unavailable";
+  } finally {
+    weather.innerText = weatherString;
   }
-
-  weather.innerText = weatherString;
 }
 
 document
