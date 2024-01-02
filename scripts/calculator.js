@@ -92,8 +92,9 @@ calculate = () => {
   screen.value = screen.value.slice(0, screen.value.length - 1);
 
   try {
-    let replacedOperators = screen.value.replace(/÷/g, "/");
+    let replacedOperators;
     replacedOperators = screen.value.replace(/x/g, "*");
+    replacedOperators = screen.value.replace(/÷/g, "/");
     screen.value = eval(replacedOperators);
   } catch (error) {
     screen.value = "Error";
