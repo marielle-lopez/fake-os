@@ -9,13 +9,14 @@ let gameOver = false;
 
 hideMinesweeper = () => {
   document.querySelector(".app-area").innerHTML = "";
-  board = [];
   gameOver = false;
   minesLocation = [];
   tilesClicked = 0;
 };
 
 showMinesweeper = () => {
+  board = [];
+
   document.querySelector(".app-area").innerHTML = `
     <div class="minesweeper">
       <div class="minesweeper__title-bar">
