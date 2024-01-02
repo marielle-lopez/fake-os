@@ -144,18 +144,25 @@ showHelp = () => {
 
 async function setWeather() {
   const weather = document.querySelector("#weather");
-  const url =
-    "http://api.weatherapi.com/v1/current.json?key=deaee7e239224b5c83c90948231612&q=auto:ip";
-  const response = await fetch(url);
+  let weatherString;
 
-  let data = await response.json();
+  try {
+    const url =
+      "http://api.weatherapi.com/v1/current.json?key=deaee7e239224b5c83c90948231612&q=auto:ip";
+    const response = await fetch(url);
 
-  const currentWeather = {
-    condition: data.current.condition.text,
-    temperature: data.current.temp_c,
-  };
+    let data = await response.json();
 
-  const weatherString = `${currentWeather.temperature}°C ${currentWeather.condition}`;
+    const currentWeather = {
+      condition: data.current.condition.text,
+      temperature: data.current.temp_c,
+    };
+
+    weatherString = `${currentWeather.temperature}°C ${currentWeather.condition}`;
+  } catch (error) {
+    console.warn(error);
+    weatherString = "Weather data unavailable";
+  }
 
   weather.innerText = weatherString;
 }
