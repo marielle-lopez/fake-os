@@ -441,57 +441,57 @@
   font-size: 16px;
 }
 
-.settings-window {
+.settings {
   background-color: white;
   border: 1px solid black;
   width: 600px;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
-.settings-window__title-bar {
+.settings__title-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
   padding: 2px 10px;
 }
-.settings-window__title-bar__title {
+.settings__title-bar__title {
   margin: 0;
 }
-.settings-window__title-bar__close {
+.settings__title-bar__close {
   cursor: default;
 }
-.settings-window__heading {
+.settings__heading {
   margin: 20px 15px;
 }
-.settings-window__text {
+.settings__text {
   margin: 30px 15px 20px;
   font-family: LeviWindows;
   font-size: 16px;
 }
 
-.help-window {
+.help {
   background-color: white;
   border: 1px solid black;
   width: 600px;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
-.help-window__title-bar {
+.help__title-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
   padding: 2px 10px;
 }
-.help-window__title-bar__title {
+.help__title-bar__title {
   margin: 0;
 }
-.help-window__title-bar__close {
+.help__title-bar__close {
   cursor: default;
 }
-.help-window__heading {
+.help__heading {
   margin: 20px 15px;
 }
-.help-window__text {
+.help__text {
   margin: 30px 15px 20px;
   font-family: LeviWindows;
   font-size: 16px;

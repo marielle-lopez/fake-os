@@ -64,10 +64,10 @@
   @include layout.about;
 }
 
-.settings-window {
+.settings {
   @include layout.settings;
 }
 
-.help-window {
+.help {
   @include layout.help;
 }
