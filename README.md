@@ -10,6 +10,8 @@ Some inspiration for applications are taken from MacOS and Windows98; however, m
 
 Have fun while you're looking around!
 
+[Deployed version](https://vermillion-frangollo-7bf88c.netlify.app)
+
 ## Connect 4
 
 A popular boardgame made using HTML, SCSS, and JavaScript. Connect four of the same coloured tokens in a row to win!
